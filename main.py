@@ -78,6 +78,8 @@ class MineSweeper:
             cur_btn['text'] = ''
             self.FLAGS += 1
 
+        self.win()
+
     def click(self, clicked_button: MyButton):
 
         if self.IS_GAME_OVER:
@@ -105,6 +107,8 @@ class MineSweeper:
                 self.breadth_first_search(clicked_button)
         clicked_button.config(state='disabled')
         clicked_button.config(relief=tk.SUNKEN)
+
+        self.win()
 
     def breadth_first_search(self, btn: MyButton):
         queue = [btn]
@@ -144,6 +148,22 @@ class MineSweeper:
         self.create_widgets()
         self.IS_FIRST_CLICK = True
         self.IS_GAME_OVER = False
+        self.FLAGS = self.MINES
+
+    def win(self):
+        open_all_mines = 0
+        open_all_not_mines = 0
+        for i in range(1, self.ROW + 1):
+            for j in range(1, self.COLUMNS + 1):
+                btn = self.buttons[i][j]
+                if btn.is_mine and btn['text'] == '🚩':
+                    open_all_mines += 1
+                if btn.is_open and not btn.is_mine and btn['text'] != '🚩':
+                    open_all_not_mines += 1
+        if open_all_mines == self.MINES or open_all_not_mines == self.ROW * self.COLUMNS - self.MINES:
+            showinfo('Победа',
+                     'Поздравляем, вы нашли все мины!')
+            self.IS_GAME_OVER = True
 
     def create_settings_window(self):
         win_settings = tk.Toplevel(self.window)
