@@ -41,7 +41,6 @@ class MineSweeper:
     MINES = 10
     IS_GAME_OVER = False
     IS_FIRST_CLICK = True
-    FLAGS = MINES
 
     def __init__(self):
 
@@ -66,17 +65,11 @@ class MineSweeper:
         # if cur_btn['state'] == 'normal':
         if cur_btn['text'] != '🚩':
 
-            if self.FLAGS == 0:
-                showinfo('Недопустимое количество флагов',
-                         'Количество флагов не должно превышать количество мин!')
-            else:
-                # cur_btn['state'] = 'disabled'
-                cur_btn['text'] = '🚩'
-                self.FLAGS -= 1
-        elif cur_btn['text'] == '🚩':
+            # cur_btn['state'] = 'disabled'
+            cur_btn['text'] = '🚩'
+        else:
             cur_btn['state'] = 'normal'
             cur_btn['text'] = ''
-            self.FLAGS += 1
 
         self.win()
 
@@ -88,7 +81,7 @@ class MineSweeper:
         if self.IS_FIRST_CLICK:
             self.insert_mines(clicked_button.number)
             self.count_mines_in_buttons()
-            self.print_buttons()
+            # self.print_buttons()
             self.IS_FIRST_CLICK = False
 
         if clicked_button.is_mine:
@@ -132,7 +125,7 @@ class MineSweeper:
 
                         next_btn = self.buttons[x + dx][y + dy]
                         if (not next_btn.is_open and self.is_button_in_field(next_btn)
-                                and next_btn not in queue):
+                                and next_btn not in queue and next_btn['text'] != '🚩'):
                             queue.append(next_btn)
 
     def show_rest_mines(self):
@@ -148,7 +141,6 @@ class MineSweeper:
         self.create_widgets()
         self.IS_FIRST_CLICK = True
         self.IS_GAME_OVER = False
-        self.FLAGS = self.MINES
 
     def win(self):
         open_all_mines = 0
