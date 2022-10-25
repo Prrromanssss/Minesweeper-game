@@ -45,5 +45,5 @@ python -m main.py
 * __Настройки__ - настроить количество строк, колонок, мин
 * __Выход__ - выйти из игры
 
-![Иллюстрация проекта](https://github.com/Prrromanssss/Minesweeper_GUI/raw/main/media/image.png)
+![Иллюстрация проекта](https://github.com/Prrromanssss/Minesweeper_GUI/raw/main/media/game_in_process_image.png)
 ***
