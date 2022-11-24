@@ -17,7 +17,7 @@ In this project, I wrote a famous game - Minesweeper.
 
 1.1 Run this command
 ```commandline
-git clone https://github.com/Prrromanssss/Chess_GUI.git
+git clone https://github.com/Prrromanssss/Minesweeper_GUI.git
 ```
 
 ### 2. Creation and activation venv
