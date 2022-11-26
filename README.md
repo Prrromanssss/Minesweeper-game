@@ -1,8 +1,7 @@
 # Minesweeper game
 
 
-## ![flake8 test](https://github.com/Prrromanssss/Minesweeper-game
-/actions/workflows/python-package.yml/badge.svg)
+## ![flake8 test](https://github.com/Prrromanssss/Minesweeper-game/actions/workflows/python-package.yml/badge.svg)
 
 
 
