@@ -62,5 +62,5 @@ This file has a menu where you can select one of three settings.
 * __Settings__ - set the number of rows, columns, min
 * __Exit__ - exit the game
 
-![Image of the prpject](https://github.com/Prrromanssss/Minesweeper_GUI/raw/main/media/game_in_process_image.png)
+![Image of the prpject](https://github.com/Prrromanssss/Minesweeper-game/raw/main/media/game_in_process_image.png)
 ***
