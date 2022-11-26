@@ -1,7 +1,8 @@
 # Minesweeper game
 
 
-## ![flake8 test](https://github.com/Prrromanssss/LyceumYandex_django/actions/workflows/python-package.yml/badge.svg)
+## ![flake8 test](https://github.com/Prrromanssss/Minesweeper-game
+/actions/workflows/python-package.yml/badge.svg)
 
 
 
@@ -17,7 +18,7 @@ In this project, I wrote a famous game - Minesweeper.
 
 1.1 Run this command
 ```commandline
-git clone https://github.com/Prrromanssss/Minesweeper_GUI.git
+git clone https://github.com/Prrromanssss/Minesweeper-game.git
 ```
 
 ### 2. Creation and activation venv
