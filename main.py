@@ -275,8 +275,6 @@ class MineSweeper:
 
     def start(self):
         self.create_widgets()
-
-        # self.open_all_buttons()
         self.window.mainloop()
 
 
